@@ -2,8 +2,9 @@ import Head from "next/head"
 import styles from "../theme"
 
 import About from "../components/about"
-import Work from "../components/work"
 import Footer from "../components/footer"
+// pages
+import WorkList from "../pages/work"
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
 
       <main>
         <About />
-        <Work />
+        <WorkList />
       </main>
 
       <footer>
