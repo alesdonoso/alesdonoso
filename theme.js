@@ -13,7 +13,8 @@ const styles = {
       color: '#fff',
       fontSize: 50,
       fontWeight: 700,
-      textAlign: 'center'
+      textAlign: 'center',
+      textDecoration: 'underline'
   },
 };
 
