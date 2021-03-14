@@ -1,21 +1,51 @@
-import Head from 'next/head'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../theme";
 
 export default function Home() {
   return (
-    <div className="container">
+    <div style={styles.container}>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <div style={styles.twoColumns}>
+          <div>
+            <h1 className="title">About</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum. Why do we use it? It is a long established fact that
+              a reader will be distracted by the readable content of a page when
+              looking at its layout. The point of using Lorem Ipsum is that it
+              has a more-or-less normal distribution of letters, as opposed to
+              using 'Content here, content here', making it look like readable
+              English. Many desktop publishing packages and web page editors now
+              use Lorem Ipsum as their default model text, and a search for
+              'lorem ipsum' will uncover many web sites still in their infancy.
+              Various versions have evolved over the years, sometimes by
+              accident, sometimes on purpose (injected humour and the like).
+            </p>
+          </div>
+          <div>
+          <Image
+            className="avatar"
+            src="/alesdonoso.jpg"
+            alt="Picture of the author"
+            width={1000}
+            height={1250}
+          />
+          </div>
+        </div>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
@@ -54,7 +84,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
       </footer>
@@ -67,6 +97,7 @@ export default function Home() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          background-color: #141821;
         }
 
         main {
@@ -78,13 +109,17 @@ export default function Home() {
           align-items: center;
         }
 
+        .avatar {
+          border-radius: 15px;
+        }
+
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
           display: flex;
           justify-content: center;
           align-items: center;
+          color: #fff;
         }
 
         footer img {
@@ -117,25 +152,12 @@ export default function Home() {
           margin: 0;
           line-height: 1.15;
           font-size: 4rem;
+          color: white;
         }
 
         .title,
         .description {
           text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
 
         .grid {
@@ -149,13 +171,19 @@ export default function Home() {
         }
 
         .card {
+          background: linear-gradient(
+            90deg,
+            rgba(0, 148, 251, 1) 0%,
+            rgba(0, 148, 251, 1) 19%,
+            rgba(128, 0, 255, 1) 100%
+          );
+
           margin: 1rem;
           flex-basis: 45%;
           padding: 1.5rem;
           text-align: left;
-          color: inherit;
+          color: white;
           text-decoration: none;
-          border: 1px solid #eaeaea;
           border-radius: 10px;
           transition: color 0.15s ease, border-color 0.15s ease;
         }
@@ -163,8 +191,9 @@ export default function Home() {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
+          color: #fff;
           border-color: #0070f3;
+          transition: #fff 0.15s ease, border-color 0.15s ease;
         }
 
         .card h3 {
@@ -205,5 +234,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
