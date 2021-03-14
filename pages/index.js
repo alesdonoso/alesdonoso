@@ -1,52 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../theme";
+
+import About from "../components/about";
 
 export default function Home() {
   return (
     <div style={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>alesdonoso portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <div style={styles.twoColumns}>
-          <div>
-            <h1 className="title">About</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum. Why do we use it? It is a long established fact that
-              a reader will be distracted by the readable content of a page when
-              looking at its layout. The point of using Lorem Ipsum is that it
-              has a more-or-less normal distribution of letters, as opposed to
-              using 'Content here, content here', making it look like readable
-              English. Many desktop publishing packages and web page editors now
-              use Lorem Ipsum as their default model text, and a search for
-              'lorem ipsum' will uncover many web sites still in their infancy.
-              Various versions have evolved over the years, sometimes by
-              accident, sometimes on purpose (injected humour and the like).
-            </p>
-          </div>
-          <div>
-          <Image
-            className="avatar"
-            src="/alesdonoso.jpg"
-            alt="Picture of the author"
-            width={1000}
-            height={1250}
-          />
-          </div>
-        </div>
-
+        <About />
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
@@ -90,16 +56,6 @@ export default function Home() {
       </footer>
 
       <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          background-color: #141821;
-        }
-
         main {
           padding: 5rem 0;
           flex: 1;
@@ -108,28 +64,18 @@ export default function Home() {
           justify-content: center;
           align-items: center;
         }
+        .container {
+          min-height: 100vh;
+          padding: 0 0.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          background-color: #141821
+        }
 
         .avatar {
           border-radius: 15px;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
         }
 
         a {

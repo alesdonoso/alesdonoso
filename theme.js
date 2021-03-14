@@ -6,18 +6,15 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#141821",
+    background: '#141821'
+
   },
-  twoColumns: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    width: '40%'
+  title: {
+      color: '#fff',
+      fontSize: 50,
+      fontWeight: 700,
+      textAlign: 'center'
   },
-  avatar: {
-      borderRadius: 15
-  }
 };
 
 export default styles;
