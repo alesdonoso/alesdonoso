@@ -2,7 +2,7 @@ import Head from "next/head"
 import styles from "../theme"
 
 import About from "../components/about"
-import Projects from "../components/projects"
+import Work from "../components/work"
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
 
       <main>
         <About />
-        <Projects />
+        <Work />
       </main>
 
       <footer>

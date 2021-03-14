@@ -1,14 +1,21 @@
 import styles from "../theme";
 
-const Projects = () => {
+import Link from 'next/link'
+
+const dataProject = [
+    {
+
+    }
+]
+
+const Work = () => {
   return (
     <div>
       <h1 style={styles.title}>Projects</h1>
       <div className="projects-section">
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>Documentation &rarr;</h3>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      <Link href="/blog" className="card">
+          <a>Home</a>
+        </Link>
 
         <a href="https://nextjs.org/learn" className="card">
           <h3>Learn &rarr;</h3>
@@ -77,4 +84,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Work;
