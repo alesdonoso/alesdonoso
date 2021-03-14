@@ -1,30 +1,33 @@
 import styles from "../theme";
 
-import Link from 'next/link'
+import Link from "next/link";
 
 const workData = [
-    {
-      title: 'Scope',
-      description: 'Software Engineering metrics in a single dashboard.',
-      route: '/work'
-    },
-    {
-      title: 'CV Advisors',
-      description: 'CV Advisors is a global multi-family office headquartered in Miami, Florida.',
-      route: '/work'
-    },
-    {
-      title: 'Paint Uber',
-      description: 'Una nueva forma de pintar nuestro hogar, una nueva forma de cuidar nuestro futuro',
-      route: '/work'
-    },
-    {
-      title: 'Cargo Lift',
-      description: 'Software Engineering metrics in a single dashboard.',
-      route: '/work'
-    },
-    
-]
+  {
+    title: "Card 1",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 2",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 3",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 4",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+];
 
 export default workData;
 
@@ -33,7 +36,7 @@ const Work = () => {
     <div>
       <h1 style={styles.title}>Work</h1>
       <div className="projects-section">
-      <Link href="/blog" className="card">
+        <Link href="/blog" className="card">
           <a>Home</a>
         </Link>
 
@@ -103,4 +106,3 @@ const Work = () => {
     </div>
   );
 };
-

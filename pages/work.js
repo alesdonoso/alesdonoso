@@ -3,13 +3,16 @@ import styles from "../theme";
 
 import workData from "../components/workData";
 
-const WorkList = (event, route) => {
+const WorkList = () => {
   return (
     <div>
       <h1 style={styles.title}>Work</h1>
       <div style={style.workSection}>
         {workData.map((workItem) => (
-          <Card onClick={workItem.route}><h3 style={style.cardTitle}>{workItem.title} &rarr;</h3><p style={style.cardDescription}>{workItem.description}</p></Card>
+          <Card>
+            <h3 style={style.cardTitle}>{workItem.title} &rarr;</h3>
+            <p style={style.cardDescription}>{workItem.description}</p>
+          </Card>
         ))}
       </div>
     </div>
@@ -18,13 +21,12 @@ const WorkList = (event, route) => {
 
 export default WorkList;
 
-
 const Card = styled.button`
+  flex: auto;
   width: 350px;
   height: 320px;
   background: #0093fa;
   margin: 1.5rem;
-  flex-basis: 40%;
   padding: 2rem;
   text-align: left;
   color: white;
@@ -39,7 +41,11 @@ const Card = styled.button`
     transition: 1s;
   }
   &:focus {
-      outline: none;
+    outline: none;
+  }
+  @media (max-width: 600px) {
+    margin: 0.5rem;
+    width: 300px;
   }
 `;
 
@@ -52,12 +58,12 @@ const style = {
     margintop: "3rem",
   },
   cardTitle: {
-    fontSize: '2rem',
+    fontSize: "2rem",
     fontWeight: 700,
   },
   cardDescription: {
     margin: 0,
-    fontSize: '1.2rem',
-    lineHeight: '1.5',
-  }
+    fontSize: "1rem",
+    lineHeight: "1.5",
+  },
 };

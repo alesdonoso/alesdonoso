@@ -14,7 +14,8 @@ const styles = {
       fontSize: 50,
       fontWeight: 700,
       textAlign: 'center',
-      textDecoration: 'underline'
+      textDecoration: 'underline',
+      marginBottom: '4rem'
   },
 };
 
