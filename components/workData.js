@@ -1,19 +1,40 @@
-import styles from "../theme";
+import Link from "next/link";
 
-import Link from 'next/link'
+const workData = [
+  {
+    title: "Card 1",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 2",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 3",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+  {
+    title: "Card 4",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    route: "/work",
+  },
+];
 
-const dataProject = [
-    {
-
-    }
-]
+export default workData;
 
 const Work = () => {
   return (
     <div>
-      <h1 style={styles.title}>Projects</h1>
+      <h1>Work</h1>
       <div className="projects-section">
-      <Link href="/blog" className="card">
+        <Link href="/blog" className="card">
           <a>Home</a>
         </Link>
 
@@ -83,5 +104,3 @@ const Work = () => {
     </div>
   );
 };
-
-export default Work;
