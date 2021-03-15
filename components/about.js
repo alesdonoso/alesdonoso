@@ -47,7 +47,7 @@ const About = () => {
       `}</style>
       <style jsx global>{`
         .avatar {
-          border-radius: 15px;
+          border-radius: 20px;
         }
       `}</style>
     </div>

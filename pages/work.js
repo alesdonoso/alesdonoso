@@ -12,7 +12,7 @@ const WorkList = () => {
       <div style={style.workSection}>
         {workData.map((workItem) => (
           <Link href={workItem.route}>
-            <Card>
+            <Card> 
               <h3 style={style.cardTitle}>{workItem.title} &rarr;</h3>
               <p style={style.cardDescription}>{workItem.description}</p>
             </Card>
