@@ -1,5 +1,3 @@
-import styles from "../theme";
-
 import Link from "next/link";
 
 const workData = [
@@ -34,7 +32,7 @@ export default workData;
 const Work = () => {
   return (
     <div>
-      <h1 style={styles.title}>Work</h1>
+      <h1>Work</h1>
       <div className="projects-section">
         <Link href="/blog" className="card">
           <a>Home</a>

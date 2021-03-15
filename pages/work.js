@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import styles from "../theme";
 
+import Link from "next/link";
+
 import workData from "../components/workData";
 
 const WorkList = () => {
@@ -9,10 +11,12 @@ const WorkList = () => {
       <h1 style={styles.title}>Work</h1>
       <div style={style.workSection}>
         {workData.map((workItem) => (
-          <Card>
-            <h3 style={style.cardTitle}>{workItem.title} &rarr;</h3>
-            <p style={style.cardDescription}>{workItem.description}</p>
-          </Card>
+          <Link href={workItem.route}>
+            <Card>
+              <h3 style={style.cardTitle}>{workItem.title} &rarr;</h3>
+              <p style={style.cardDescription}>{workItem.description}</p>
+            </Card>
+          </Link>
         ))}
       </div>
     </div>
